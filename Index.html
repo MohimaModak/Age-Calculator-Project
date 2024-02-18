@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="Age.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="center">
+        <div class="baseOfAge">
+          <h1 class="heading">Age Calculator</h1>
+          <br />
+          <div class="headingInput">
+            <span class="block"
+              ><input
+                type="text"
+                required
+                placeholder="date"
+                id="date"
+                name="data"
+            /></span>
+            <span class="block"
+              ><input
+                type="text"
+                required
+                placeholder="mm"
+                id="month"
+                name="month"
+            /></span>
+            <span class="block"
+              ><input
+                type="text"
+                required
+                placeholder="yr"
+                id="year"
+                name="year"
+            /></span>
+          </div>
+          <div class="heading">
+            <input type="button" value="Submit" name="Submit" onclick="age()" />
+          </div>
+          <div class="age" id="age"></div>
+        </div>
+      </div>
+    </div>
+
+   <!-- <script>
+      function age() {
+        var d1 = document.getElementById("date").value;
+        var m1 = document.getElementById("month").value;
+        var y1 = document.getElementById("year").value;
+
+        var date = new Date(); // date is a js method. that collects time from my device
+
+        var d2 = date.getDate();
+        var m2 = date.getMonth();
+        var y2 = date.getFullYear();
+
+        var month = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+
+        if (d1 > d2) {
+          d2 = d2 + month[m2 - 1];
+          m2 = m2 - 1;
+        }
+
+        // if (20 > 18) {
+        //   m2 = m2-1 jonmodin jodi current er date er beshi hoi tahole current mash theke 1 minus hobe minux erpor je mash hobe oi mash e 31/30 er sathe current date jog korbo tahole 31 + 18 = 49
+        // }
+
+        
+
+        if (m1 > m2) {
+          m2 = m2 + 12;
+          y2 = y2 - 1;
+        }
+
+        // if (12 > 2) {
+        //   m2 = 1 + 12; upore month = 1 hoyeche oi month niche bosbe
+        //   y2 = 2024 - 1; current year theke 1 minus hobe
+        // }
+        
+        var d = d2 - d1;
+        var m = m2 - m1;
+        var y = y2 - y1;
+        // var d = 49 - 20;
+        // var m = 13 - 12;
+        // var y = 2023 - 2000;
+
+       
+        document.getElementById("age").innerHTML =
+          "Your age is " +
+          "" +
+          y +
+          " Years" +
+          "" +
+          m +
+          "" +
+          " Months" +
+          "" +
+          d +
+          "" +
+          " Days";
+      }
+    </script> -->
+
+   <script>
+      function age() {
+        var d1 = document.getElementById("date").value;
+        var m1 = document.getElementById("month").value;
+        var y1 = document.getElementById("year").value;
+
+        var date = new Date(); // date is a js method. that collects time from my device
+
+        var d2 = date.getDate();
+        var m2 = date.getMonth();
+        var y2 = date.getFullYear();
+
+        var month = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+
+        // d1 = birthday date
+        // m1 = birthday month
+        // y1 = birthday year
+
+        // d2 = current date
+        // m2 = current month
+        // y2 = current year
+
+        d = Math.abs(d2 - d1);
+        m = Math.abs(m2 - m1);
+        y = Math.abs(y2 - y1);
+
+        document.getElementById("age").innerHTML =
+          "Your age is " +
+          " " +
+          y +
+          " Years" +
+          " " + 
+          m +
+          " " +
+          " Months" +
+          " " +
+          d +
+          " " +
+          " Days";
+      }
+    </script>
+  </body>
+</html>
