@@ -6,7 +6,7 @@ body {
   padding: 0;
 }
 .container {
-  background: url("https://images.pexels.com/photos/416920/pexels-photo-416920.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1")
+  background: url("https://img.freepik.com/free-photo/glowing-spaceship-orbits-planet-starry-galaxy-generated-by-ai_188544-9655.jpg?w=826&t=st=1708317103~exp=1708317703~hmac=98f33d9eb9f7cebc868ea4dcfaa5ab182d63d232a9ad753c055d0d5a9fcfd699")
     no-repeat center center fixed;
   background-size: cover;
   height: 100vh;
@@ -17,7 +17,7 @@ body {
 }
 
 .baseOfAge {
-  backdrop-filter: blur(5px);
+  backdrop-filter: blur(18px);
   padding: 25px;
   border-radius: 15px;
   box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
